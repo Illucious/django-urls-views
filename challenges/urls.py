@@ -7,7 +7,10 @@ from . import views
     path('february', views.february_challenge),
 ]
 """
+
+
 urlpatterns = [
     path('', views.challenges_main),
-    path('<month>', views.monthly_challenge),
+    path('<int:month>', views.monthly_challenge_by_number),
+    path('<str:month>', views.monthly_challenge),
 ]
